@@ -1,0 +1,2 @@
+echo -e "First $1 number of lines of $3 : \n`head -$1 $3` \n"
+echo -e "Last $2 number of lines of $3 : \n`tail -$2 $3` \n"
