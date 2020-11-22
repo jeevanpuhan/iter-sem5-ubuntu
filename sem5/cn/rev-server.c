@@ -4,7 +4,7 @@
 #include <sys/socket.h> 
 #include <unistd.h> 
 
-void bubble_sort(int[], int);
+void reverse(int[], int);
 void display(int[], int); 
 
 // Driver code 
@@ -57,9 +57,10 @@ int main(int argc, char* argv[])
 		
 		printf("Array Received: \n");
 		display(message, 10);
-		bubble_sort(message, 10); 
 		
-		printf("Sorted Array: \n");
+		reverse(message, 10); 
+		
+		printf("Reverse Array: \n");
 		display(message, 10);
 
 		write(client_sock, &message, 10 * sizeof(int)); 
@@ -75,28 +76,28 @@ int main(int argc, char* argv[])
 	return 0; 
 } 
 
-// Bubble sort function
-void bubble_sort(int list[], int n) 
+// Reverse Array function
+void reverse(int list[], int n) 
 { 
-	int a, b, t; 
-
-	for (a = 0; a < (n - 1); a++) { 
-		for (b = 0; b < n - a - 1; b++) { 
-			if (list[b] > list[b + 1]) { 
-
-				t = list[b]; 
-				list[b] = list[b + 1]; 
-				list[b + 1] = t; 
-			} 
-		} 
-	} 
+	int arr[n],i;
+	
+	for(i=0; i<n; i++)
+	{
+		arr[i] = list[n-i-1];
+	}
+	
+	for(i=0; i<n; i++)
+	{
+		list[i] = arr[i];
+	}
+	
 }
 
 // Display array received from client
 void display(int list[], int n)
 {
 	int i;
-	printf("\n[");
+	printf("\n[ ");
 	for(i=0; i<n; i++)
 	{
 		printf("%d, ", list[i]);

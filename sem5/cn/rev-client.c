@@ -52,10 +52,12 @@ int main(int argc, char* argv[])
 		return 0; 
 	} 
 
-	puts("Sorted Array :\n"); 
+	puts("Reverse Array :\n");
+	printf("[ ");
 	for (i = 0; i < 10; i++) { 
-		printf("%d\n", server_reply[i]); 
+		printf("%d, ", server_reply[i]); 
 	} 
+	printf("]\n");
  
 	close(sock); 
 	return 0; 
