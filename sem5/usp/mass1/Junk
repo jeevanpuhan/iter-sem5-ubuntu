@@ -1,0 +1,4 @@
+The Unix system if full duplex: The character
+you type on the keyboard are sent to the system,
+which sends them back to the terminal to be
+printed on the screen.
