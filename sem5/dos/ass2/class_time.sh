@@ -15,7 +15,7 @@ echo "friday dos class timing is from 8-9am";;
 sat)
 echo "saturday have dos class from 11-12am";;
 sun)
-echo "today is sunday";;
+echo "sunday is holiday";;
 *)
 echo "holiday or enter a valid day";;
 esac

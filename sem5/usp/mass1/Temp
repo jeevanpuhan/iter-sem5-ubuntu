@@ -1,0 +1,6 @@
+Normally, this echo
+process copies the characters directly to the
+screen, so you can see what you are typing,
+but some times, such as when you are typing a
+secret password, the echo is turned of so the
+characters do not appear on the screen
