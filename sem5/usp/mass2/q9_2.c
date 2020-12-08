@@ -4,13 +4,13 @@
 
 int main()
 {
-	char str[] = "TOC;;PLC,USP";
+	char str[] = "*ITER:IBCS;SOA:Pot*Hot:";
 	char* token;
-	token = strtok(str,";,");
+	char* ptr;
+	token = strtok_r(str,":;*",&ptr);
 	while (token!=NULL) {
 		printf("Token=%s\n",token);
-		token=strtok(NULL,";,");
+		token=strtok_r(NULL,":;*",&ptr);
 	}
-	printf("Token=%s\n",token);
 	return 0;
 }
