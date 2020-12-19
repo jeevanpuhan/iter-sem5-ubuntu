@@ -1,3 +1,4 @@
+// strtok() can't be used safely in programs with multiple threads
 #include <stdio.h>
 #include <string.h>
 
